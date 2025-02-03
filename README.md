@@ -1,39 +1,39 @@
 
 ## Ctrl+Alt+Binge (TV Show Recommender)
- > Your shortcut to the best shows ;)
+ Your shortcut to the best shows ;)
  
- > Authors: \<[Megan Diep](https://github.com/mdiep010)\> \<[Celina Vasquez Rodriguez](https://github.com/celinavasquez)\> \<[Motunrayo Lawrence](https://github.com/LawMot)\> \<[Nam Nguyen](https://github.com/n0mn0m1)\> 
+ Authors: \<[Megan Diep](https://github.com/mdiep010)\> \<[Celina Vasquez Rodriguez](https://github.com/celinavasquez)\> \<[Motunrayo Lawrence](https://github.com/LawMot)\> \<[Nam Nguyen](https://github.com/n0mn0m1)\> 
 
 ## Project Description
- > Why is Ctrl+Alt+Binge important and interesting to us?
-> 
- > This interests us because we enjoy watching TV shows and have personally had difficulty choosing shows to watch. We believe our project can help indecisive people choose a show to watch while they workout, eat, or simply just to relax.
+ Why is Ctrl+Alt+Binge important and interesting to us?
+ 
+ This interests us because we enjoy watching TV shows and have personally had difficulty choosing shows to watch. We believe our project can help indecisive people choose a show to watch while they workout, eat, or simply just to relax.
 
- > What languages/tools/technologies do we plan to use?
- > * C++ (language) 
- > * Kaggle (for data set) 
- > * VS Code 
- > * Github 
+ What languages/tools/technologies do we plan to use?
+ * C++ (language) 
+ * Kaggle (for data set) 
+ * VS Code 
+ * Github 
 
-> What will be the input/output of our project?
-> 
-> Inputs
->  
- > * Age
- > * Favorite/chosen genres
- > * Favorite show/director/actors
- > * Choose time period(90s, 2000s, 2010s, period pieces)
->    
-> Outputs
->  
- > * Names of recommended TV shows
- > * Can be output based off of genre/director/actor
- > * Sorted based off rating, release date, alphabetical order
+What will be the input/output of our project?
+ 
+Inputs
+  
+ * Age
+ * Favorite/chosen genres
+ * Favorite show/director/actors
+ * Choose time period(90s, 2000s, 2010s, period pieces)
+    
+Outputs
+  
+ * Names of recommended TV shows
+ * Can be output based off of genre/director/actor
+ * Sorted based off rating, release date, alphabetical order
 
-> What are the features that the project provides?
- > * Menu of options
- > * Random feature (discover something new, feeling lucky) 
- > * Developers favorites
+What are the features that the project provides?
+ * Menu of options
+ * Random feature (discover something new, feeling lucky) 
+ * Developers favorites
 
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
