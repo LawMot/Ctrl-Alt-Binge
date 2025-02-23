@@ -48,11 +48,9 @@ What are the features that the project provides?
 ![Navigation Diagram (2)](https://github.com/user-attachments/assets/7e90a78f-c2d9-4300-87ba-9c4acc6db245)
 ![Navigation Diagram (3)](https://github.com/user-attachments/assets/da58afee-7225-4c8a-afff-93262085310a)
  
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
+ ## Phase III
+![Navigation Diagram (5)](https://github.com/user-attachments/assets/39c1dbbd-b165-4627-8284-fe5269da08ea)
 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
  > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
  >   * A new class diagram incorporating your changes after considering the SOLID principles.
  >   * For each update in your class diagram, you must explain in 3-4 sentences:
