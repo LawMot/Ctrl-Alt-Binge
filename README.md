@@ -52,6 +52,8 @@ What are the features that the project provides?
 ![Navigation Diagram (5)](https://github.com/user-attachments/assets/39c1dbbd-b165-4627-8284-fe5269da08ea)
 
 ![Navigation Diagram](https://github.com/user-attachments/assets/724abd78-6982-416c-b014-f12dd3e9709a)
+
+![Navigation Diagram (6)](https://github.com/user-attachments/assets/779716c3-d225-482d-87e8-0b9f9651becb)
  > * Perform a new sprint plan like you did in Phase II.
  > * Make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
 >  * Each team member should also submit the Peer Evaluation Form on Canvas for phase III. In this form, you need to fill in the names of all team members, the percentage of work contributed by each member for phase III, and a description of their contributions. Remember that each team member should submit the form individually.
