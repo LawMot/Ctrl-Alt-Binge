@@ -50,7 +50,7 @@ What are the features that the project provides?
  
  ## Phase III
  ![Navigation Diagram (7)](https://github.com/user-attachments/assets/3dcb7a61-a58c-4ba4-adfd-ac4941409b48)
-![Navigation Diagram (1)](https://github.com/user-attachments/assets/cf5bac39-e8ac-4e5b-b323-126512f2c208)
+![Navigation Diagram (2)](https://github.com/user-attachments/assets/483e4f60-f7d5-4c9d-923b-3e04f221ffcf)
 ![Navigation Diagram](https://github.com/user-attachments/assets/724abd78-6982-416c-b014-f12dd3e9709a)
 ![Navigation Diagram (6)](https://github.com/user-attachments/assets/779716c3-d225-482d-87e8-0b9f9651becb)
  > * Perform a new sprint plan like you did in Phase II.
