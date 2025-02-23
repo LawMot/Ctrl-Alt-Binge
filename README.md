@@ -49,7 +49,7 @@ What are the features that the project provides?
 ![Navigation Diagram (3)](https://github.com/user-attachments/assets/da58afee-7225-4c8a-afff-93262085310a)
  
  ## Phase III
-![Navigation Diagram (5)](https://github.com/user-attachments/assets/39c1dbbd-b165-4627-8284-fe5269da08ea)
+![Navigation Diagram (1)](https://github.com/user-attachments/assets/cf5bac39-e8ac-4e5b-b323-126512f2c208)
 
 ![Navigation Diagram](https://github.com/user-attachments/assets/724abd78-6982-416c-b014-f12dd3e9709a)
 
