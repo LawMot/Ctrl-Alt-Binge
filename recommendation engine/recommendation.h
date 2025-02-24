@@ -1,5 +1,4 @@
-#ifdef RECOMMENDATION_H
-#define RECOMMENDATION_H
+#pragma once
 
 #include <string>
 
@@ -15,15 +14,14 @@ class RecommendationEngine {
     RecommendationEngine();
 
     // member functions
-    void setAge();
-    void setGenre();
-    void setDirector();
-    int getAge();
-    string getGenre();
-    string getDirector();
-    vector<TVShows> compareData(vector<TVShows>);
-    vector<TVShows> createRandReccomendation(vector<TVShows>);
+    void setAge() const;
+    void setGenre(const string genre) const;
+    void setDirector(const string director) const;
+    int getAge() const;
+    string getGenre() const;
+    string getDirector() const;
+    vector<TVShow> compareData(const vector<TVShow>) const;
+    vector<TVShow> createRandReccomendation(const vector<TVShow>) const;
 
 };
 
-#endif

@@ -1,5 +1,6 @@
 #include "recommendation.h"
 #include "gatherdata.h"
+#include "TvShow.h"
 
 #include <iostream>
 #include <string>
@@ -10,15 +11,15 @@ RecommendationEngine::RecommendationEngine() {
 
 }
 
-void RecommendationEngine::setAge() {
+void RecommendationEngine::setAge() const {
 
 }
 
-void RecommendationEngine::setGenre(const string genre){
+void RecommendationEngine::setGenre(const string genre) const{
      
 }
 
-void RecommendationEngine::setDirector(const string director) {
+void RecommendationEngine::setDirector(const string director) const{
 
 }
 
@@ -34,10 +35,10 @@ string RecommendationEngine::getDirector() const {
 
 }
 
-vector<TVShows> RecommendationEngine::compareData(const vector<TVShows>) const {
+vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
 
 }
 
-vector<TVShows> RecommendationEngine::createRandReccomendation(const vector<TVShows>) const {
+vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>) const {
 
 }
