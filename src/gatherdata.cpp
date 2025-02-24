@@ -13,7 +13,8 @@ void GatherData::loadData(){
 
 }
 
-const vector<TVShows> & GatherData::getInfo(){
+const vector<TVShow> & GatherData::getInfo()
+{
 
 }
 

@@ -3,18 +3,18 @@
 
 #include <vector>
 #include <string> 
-#include "TVShow.h"
+#include "TvShow.h"
 
 using namespace std; 
 
 class GatherData {
     private:
-        vector<TVShows> allData; 
+        vector<TVShow> allData; 
         string filePath; 
     public:
         ~GatherData(); 
         void loadData();
-        const vector<TVShows> & getInfo();
+        const vector<TVShow> & getInfo();
         string getFilePath() const;
         void setFilePath(const string & path); 
 };
