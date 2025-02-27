@@ -1,6 +1,9 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
+#include "../recommendationengine/recommendation.h"
+#include "../header/TvShow.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
