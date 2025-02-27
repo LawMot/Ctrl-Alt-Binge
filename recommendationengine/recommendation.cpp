@@ -1,6 +1,4 @@
 #include "recommendation.h"
-#include "gatherdata.h"
-#include "TvShow.h"
 
 #include <iostream>
 #include <string>
@@ -12,26 +10,26 @@ RecommendationEngine::RecommendationEngine()
 : age(-1), genre("none"), director("none") {}
 
 // constructor if user chooses age as their preference
-RecommendationEngine::RecommendationEngine(int userAge) 
+RecommendationEngine::RecommendationEngine(int const& userAge) 
 : age(userAge), genre("none"), director("none") {}
 
 // constructor if user chooses genre as their preference
-RecommendationEngine::RecommendationEngine(string userGenre, int userAge) 
+RecommendationEngine::RecommendationEngine(string const& userGenre, int const& userAge) 
 : age(userAge), genre(userGenre), director("none") {}
 
 // constructor if user chooses director as their preference
-RecommendationEngine::RecommendationEngine(string userDirector) 
-: age(-1), genre("none"), director(userDirector){}
+RecommendationEngine::RecommendationEngine(string const& userDirector) 
+: age(-1), genre("none"), director(userDirector) {}
 
-void RecommendationEngine::setAge(const int age) const {
+void RecommendationEngine::setAge(int const& userAge) {
     this->age = age;
 }
 
-void RecommendationEngine::setGenre(const string genre) const{
+void RecommendationEngine::setGenre(string const& userGenre) {
     this->genre = genre;
 }
 
-void RecommendationEngine::setDirector(const string director) const{
+void RecommendationEngine::setDirector(string const& userDirector) {
     this->director = director;
 }
 
@@ -47,10 +45,10 @@ string RecommendationEngine::getDirector() const {
     return director;
 }
 
-vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
+// vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
 
-}
+// }
 
-vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>) const {
+// vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>) const {
 
-}
+// }

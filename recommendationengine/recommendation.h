@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../header/gatherdata.h"
+#include "../header/TvShow.h"
+
 #include <string>
 
 using namespace std;
@@ -12,11 +15,15 @@ class RecommendationEngine {
     public:
     // constructor
     RecommendationEngine();
+    RecommendationEngine(int const& userAge);
+    RecommendationEngine(string const& userGenre, int const& userAge);
+    RecommendationEngine(string const& userDirector);
+
 
     // member functions
-    void setAge() const;
-    void setGenre(const string genre) const;
-    void setDirector(const string director) const;
+    void setAge(int const& userAge);
+    void setGenre(string const& userGenre);
+    void setDirector(string const& userDirector);
     int getAge() const;
     string getGenre() const;
     string getDirector() const;

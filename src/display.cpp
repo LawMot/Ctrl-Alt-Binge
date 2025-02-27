@@ -1,17 +1,22 @@
 #include "../header/display.h"
 #include <iostream>
+#include <limits>
+#include <vector>
 
 
 void Display::Menu() {
-    // if user chooses enter preferences
+
     int input;
     cout << "Welcome to Ctrl+ALt+Binge!" << endl;
     cout << "1. Enter Preferences" << endl;
     cout << "2. Random Recommendation" << endl;
     cout << "3. Developers' Favorites" << endl;
-    cout << "4. Exit"
+    cout << "4. Exit" << endl;
     cout << "Please select an option (1-4): " << endl;
+    cin >> input;
+    cout << endl;
 
+    // if user chooses enter preferences
     if (input == 1) {
         
         int choice;
@@ -22,20 +27,21 @@ void Display::Menu() {
             cout << "2. Favorite Genre" << endl;
             cout << "3. Favorite Director" << endl;
             cout << "Please select an option (1-3): " << endl;
+
             cin >> choice;
+            cout << endl;
 
             if (choice == 1) {
                 int userAge;
                 cout << "Enter Your Age: (a number please!)" << endl;
                 cin >> userAge;
-                while (true) {
-                    if (cin.fail()) {
-                        cin.clear();
-                        cin.ignore();
-                        cout << "Ok maybe there was some disconnect.. a number (i.e 7 NOT seven or some other words/characters)";
-                    } else {
-                        break;
-                    }
+                cout << endl;
+
+                if (cin.fail()) {
+                    cin.clear(); // clear the error flag
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Ok maybe there was some disconnect.. a number (i.e 7 NOT seven or some other words/characters)\n" << endl;
+                    continue;
                 }
                 RecommendationEngine ageRecommend(userAge);
                 break;
@@ -54,9 +60,9 @@ void Display::Menu() {
                 break;
 
             } else {
-                cout << "Now you know that wasn't an option, input again." << endl;
+                cout << "Now you know that wasn't an option, input again.\n" << endl;
             }
-    }
+        }
         displayRecommendationsCust();
     }
 }
