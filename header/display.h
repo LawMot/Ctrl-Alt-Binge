@@ -7,6 +7,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "recommendation.h"
+#include "TvShow.h"
 
 class Display {
 public:
@@ -18,9 +20,11 @@ public:
 
     void displayRecommendationsCust();
 
+    Display(const RecommendationEngine& engine, const std::vector<TVShow>& allShows);
 private:
-
-    void displayRecommendations(const std::vector<std::string>& recommendations);
+    const RecommendationEngine& engine;
+    const std::vector<TVShow>& allShows;
+    void displayRecommendations(const vector<TVShow>);
 };
 
 #endif // DISPLAY_H
