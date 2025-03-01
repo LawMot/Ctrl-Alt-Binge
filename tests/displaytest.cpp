@@ -1,7 +1,9 @@
 #include "../header/display.h"
+
 int main () {
     Display showMenu;
     showMenu.Menu();
+    showMenu.displayRecommendationsDev();
     return 0;
 
 }

@@ -22,15 +22,15 @@ RecommendationEngine::RecommendationEngine(string const& userDirector)
 : age(-1), genre("none"), director(userDirector) {}
 
 void RecommendationEngine::setAge(int const& userAge) {
-    this->age = age;
+    age = userAge;
 }
 
 void RecommendationEngine::setGenre(string const& userGenre) {
-    this->genre = genre;
+    genre = userGenre;
 }
 
 void RecommendationEngine::setDirector(string const& userDirector) {
-    this->director = director;
+    director = userDirector;
 }
 
 int RecommendationEngine::getAge() const {

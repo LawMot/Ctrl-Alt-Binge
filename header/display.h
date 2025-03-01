@@ -7,8 +7,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "recommendation.h"
-#include "TvShow.h"
 
 class Display {
 public:
