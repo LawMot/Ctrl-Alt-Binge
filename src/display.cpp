@@ -66,6 +66,32 @@ void Display::Menu() {
             }
         }
         displayRecommendationsCust();
+    } else if (input == 2) {
+        displayRecommendationsRand();
+
+        int nextChoice;
+        cout << "\n Would you like to go back to menu or exit?" << endl;
+        cout << "Input 1 for menu OR input 2 to exit" << endl;
+        if (nextChoice == 1) {
+            Menu();
+        } else if (nextChoice == 2) {
+            cout << "Bye! Hope you come around soon!" << endl;
+        }
+    } else if (input == 3) {
+        displayRecommendationsDev();
+
+        int nextChoice;
+        
+        cout << "\n Would you like to go back to menu or exit?" << endl;
+        cout << "Input 1 for menu OR input 2 to exit" << endl;
+        if (nextChoice == 1) {
+            Menu();
+        } else if (nextChoice == 2) {
+            cout << "Bye! Hope you come around soon!" << endl;
+        }
+        
+    } else if (input == 4) {
+        cout << "Bye! Hope you come around soon!" << endl;
     }
 }
 
