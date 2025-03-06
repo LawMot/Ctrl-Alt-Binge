@@ -9,30 +9,45 @@ Display::Display(const RecommendationEngine& engine, const std::vector<TVShow>& 
 void Display::Menu() {
 
     int input;
-    cout << "Welcome to Ctrl+ALt+Binge!" << endl;
-    cout << "1. Enter Preferences" << endl;
-    cout << "2. Random Recommendation" << endl;
-    cout << "3. Developers' Favorites" << endl;
-    cout << "4. Exit" << endl;
-    cout << "Please select an option (1-4): " << endl;
-    cin >> input;
-    cout << endl;
 
-    // if user chooses enter preferences
-    if (input == 1) {
-        RecommendationEngine custEngine = SetPreferences();
-        displayRecommendationsCust();
-        
-    } else if (input == 2) {
-        displayRecommendationsRand();
-        ChooseMenuOrExit();
+    while (true) {
+        cout << "Welcome to Ctrl+ALt+Binge!" << endl;
+        cout << "1. Enter Preferences" << endl;
+        cout << "2. Random Recommendation" << endl;
+        cout << "3. Developers' Favorites" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Please select an option (1-4): " << endl;
 
-    } else if (input == 3) {
-        displayRecommendationsDev();
-        ChooseMenuOrExit();
+        cin >> input;
+        cout << endl;
 
-    } else if (input == 4) {
-        cout << "Bye! Hope you come around soon!" << endl;
+        // if user types in the wrong data type
+        if (cin.fail()) {
+            cin.clear(); // clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cout << "Huh I gave u numbers to choose from?!?! Try Again -_-" << endl;
+            continue;
+        }
+
+        // if user chooses enter preferences
+        if (input == 1) {
+            RecommendationEngine custEngine = SetPreferences();
+            displayRecommendationsCust();
+
+        } else if (input == 2) {
+            displayRecommendationsRand();
+            ChooseMenuOrExit();
+
+        } else if (input == 3) {
+            displayRecommendationsDev();
+            ChooseMenuOrExit();
+
+        } else if (input == 4) {
+            cout << "Bye! Hope you come around soon!" << endl;
+            break;
+        } else {
+            cout << "Now you know that wasn't an option, input again.\n" << endl;
+        }
     }
 }
 
@@ -44,10 +59,20 @@ RecommendationEngine Display::SetPreferences() {
         cout << "1. Age" << endl;
         cout << "2. Favorite Genre" << endl;
         cout << "3. Favorite Director" << endl;
+        cout << "4. Back to Menu" << endl;
+        cout << "5. Exit" << endl;
         cout << "Please select an option (1-3): " << endl;
 
         cin >> choice;
         cout << endl;
+
+        // if user types in the wrong data type
+        if (cin.fail()) {
+            cin.clear(); // clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Ok maybe there was some disconnect.. a number (i.e 7 NOT seven or some other words/characters)\n" << endl;
+            continue;
+        }
 
         if (choice == 1) {
             int userAge;
@@ -55,10 +80,11 @@ RecommendationEngine Display::SetPreferences() {
             cin >> userAge;
             cout << endl;
 
+            // if user types in the wrong data type
             if (cin.fail()) {
                 cin.clear(); // clear the error flag
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Ok maybe there was some disconnect.. a number (i.e 7 NOT seven or some other words/characters)\n" << endl;
+                cout << "A number... PLEASE I BEG a number. Try again... \n" << endl;
                 continue;
             }
             return RecommendationEngine ageRecommend(userAge);
@@ -74,6 +100,14 @@ RecommendationEngine Display::SetPreferences() {
             cin >> userDirector;
             return RecommendationEngine directorRecommend(userDirector);
 
+        } else if (choice == 4) {
+            cout << "Returning to Menu... \n" << endl;
+            Menu();
+            return RecommendationEngine();  // Not sure how this will loop back to Menu (needs testing for sure)
+        } else if (choice == 5) {
+            cout << "Exiting..." << endl;
+            cout << "Bye! Hope you come around soon!" << endl;
+            exit(0);
         } else {
             cout << "Now you know that wasn't an option, input again.\n" << endl;
         }
@@ -85,10 +119,16 @@ void Display::ChooseMenuOrExit() {
         
     cout << "\n Would you like to go back to menu or exit?" << endl;
     cout << "Input 1 for menu OR input 2 to exit" << endl;
+    cin >> nextChoice;
+
     if (nextChoice == 1) {
         Menu();
     } else if (nextChoice == 2) {
         cout << "Bye! Hope you come around soon!" << endl;
+        exit(0);
+    } else {
+        cout << "Invalid option. Returning to the menu..." << endl;
+        Menu();
     }
 }
 
