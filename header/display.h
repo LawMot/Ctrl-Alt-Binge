@@ -18,6 +18,10 @@ public:
 
     void displayRecommendationsCust();
 
+    void ChooseMenuOrExit();
+
+    RecommendationEngine SetPreferences();
+
     Display(const RecommendationEngine& engine, const std::vector<TVShow>& allShows);
 private:
     const RecommendationEngine& engine;

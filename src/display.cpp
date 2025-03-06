@@ -20,77 +20,74 @@ void Display::Menu() {
 
     // if user chooses enter preferences
     if (input == 1) {
-        
-        int choice;
-        
-        while (true) {
-            cout << "Choose your Recommendation Based off of: " << endl;
-            cout << "1. Age" << endl;
-            cout << "2. Favorite Genre" << endl;
-            cout << "3. Favorite Director" << endl;
-            cout << "Please select an option (1-3): " << endl;
-
-            cin >> choice;
-            cout << endl;
-
-            if (choice == 1) {
-                int userAge;
-                cout << "Enter Your Age: (a number please!)" << endl;
-                cin >> userAge;
-                cout << endl;
-
-                if (cin.fail()) {
-                    cin.clear(); // clear the error flag
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    cout << "Ok maybe there was some disconnect.. a number (i.e 7 NOT seven or some other words/characters)\n" << endl;
-                    continue;
-                }
-                RecommendationEngine ageRecommend(userAge);
-                break;
-            } else if (choice == 2) {
-                string userGenre;
-                cout << "Enter Your Favorite Genre: " << endl;
-                cin >> userGenre;
-                RecommendationEngine genreRecommend(userGenre, -1);
-                break;
-                
-            } else if (choice == 3) {
-                string userDirector;
-                cout << "Enter Your Favorite Director: " << endl;
-                cin >> userDirector;
-                RecommendationEngine directorRecommend(userDirector);
-                break;
-
-            } else {
-                cout << "Now you know that wasn't an option, input again.\n" << endl;
-            }
-        }
+        RecommendationEngine custEngine = SetPreferences();
         displayRecommendationsCust();
+        
     } else if (input == 2) {
         displayRecommendationsRand();
+        ChooseMenuOrExit();
 
-        int nextChoice;
-        cout << "\n Would you like to go back to menu or exit?" << endl;
-        cout << "Input 1 for menu OR input 2 to exit" << endl;
-        if (nextChoice == 1) {
-            Menu();
-        } else if (nextChoice == 2) {
-            cout << "Bye! Hope you come around soon!" << endl;
-        }
     } else if (input == 3) {
         displayRecommendationsDev();
+        ChooseMenuOrExit();
 
-        int nextChoice;
-        
-        cout << "\n Would you like to go back to menu or exit?" << endl;
-        cout << "Input 1 for menu OR input 2 to exit" << endl;
-        if (nextChoice == 1) {
-            Menu();
-        } else if (nextChoice == 2) {
-            cout << "Bye! Hope you come around soon!" << endl;
-        }
-        
     } else if (input == 4) {
+        cout << "Bye! Hope you come around soon!" << endl;
+    }
+}
+
+RecommendationEngine Display::SetPreferences() {
+    int choice;
+        
+    while (true) {
+        cout << "Choose your Recommendation Based off of: " << endl;
+        cout << "1. Age" << endl;
+        cout << "2. Favorite Genre" << endl;
+        cout << "3. Favorite Director" << endl;
+        cout << "Please select an option (1-3): " << endl;
+
+        cin >> choice;
+        cout << endl;
+
+        if (choice == 1) {
+            int userAge;
+            cout << "Enter Your Age: (a number please!)" << endl;
+            cin >> userAge;
+            cout << endl;
+
+            if (cin.fail()) {
+                cin.clear(); // clear the error flag
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "Ok maybe there was some disconnect.. a number (i.e 7 NOT seven or some other words/characters)\n" << endl;
+                continue;
+            }
+            return RecommendationEngine ageRecommend(userAge);
+        } else if (choice == 2) {
+            string userGenre;
+            cout << "Enter Your Favorite Genre: " << endl;
+            cin >> userGenre;
+            return RecommendationEngine genreRecommend(userGenre, -1);
+            
+        } else if (choice == 3) {
+            string userDirector;
+            cout << "Enter Your Favorite Director: " << endl;
+            cin >> userDirector;
+            return RecommendationEngine directorRecommend(userDirector);
+
+        } else {
+            cout << "Now you know that wasn't an option, input again.\n" << endl;
+        }
+    }
+}
+
+void Display::ChooseMenuOrExit() {
+    int nextChoice;
+        
+    cout << "\n Would you like to go back to menu or exit?" << endl;
+    cout << "Input 1 for menu OR input 2 to exit" << endl;
+    if (nextChoice == 1) {
+        Menu();
+    } else if (nextChoice == 2) {
         cout << "Bye! Hope you come around soon!" << endl;
     }
 }
