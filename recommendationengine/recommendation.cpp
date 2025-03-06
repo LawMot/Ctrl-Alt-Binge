@@ -49,6 +49,24 @@ string RecommendationEngine::getDirector() const {
 
 // }
 
-// vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>) const {
+vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>& allShows) const {
+    vector<TVShow> randomShows; // Store the random rec
+    if (allShows.empty()) return randomShows;
 
-// }
+    srand(time(0));  
+    
+    set<int> usedIndices;  // Track used shows
+    
+    // 5 rec or run out of shows
+    while (randomShows.size() < 5 && randomShows.size() < allShows.size()) {
+        int randomIndex = rand() % allShows.size();  // Get random index
+        
+        // Check if we haven't used this index before
+        if (usedIndices.find(randomIndex) == usedIndices.end()) {
+            randomShows.push_back(allShows[randomIndex]);
+            usedIndices.insert(randomIndex); // Marked as used 
+        }
+    }
+    
+    return randomShows;
+}

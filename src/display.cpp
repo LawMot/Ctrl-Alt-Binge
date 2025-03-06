@@ -92,6 +92,16 @@ void Display::displayRecommendationsCust() {
 
 }
 
-void Display::displayRecommendations(const vector<TVShow>) {
-
+void Display::displayRecommendationsRand() {
+    vector<TVShow> randomShows = engine.createRandReccomendation(allShows);
+    
+    cout << "===== Random Recommendations =====" << endl;
+    if (!randomShows.empty()) {
+        cout << "Here are your random picks:" << endl;
+        for (size_t i = 0; i < randomShows.size(); ++i) {
+            cout << "- " << randomShows[i].getTitle() << endl;
+        }
+    } else {
+        cout << "No shows available." << endl;
+    }
 }

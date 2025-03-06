@@ -28,6 +28,6 @@ class RecommendationEngine {
     string getGenre() const;
     string getDirector() const;
     vector<TVShow> compareData(const vector<TVShow>) const;
-    vector<TVShow> createRandReccomendation(const vector<TVShow>) const;
+    vector<TVShow> createRandReccomendation(const vector<TVShow>& allShows) const;
 };
 
