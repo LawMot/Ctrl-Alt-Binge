@@ -26,7 +26,6 @@ public:
 private:
     const RecommendationEngine& engine;
     const std::vector<TVShow>& allShows;
-    void displayRecommendations(const vector<TVShow>);
 };
 
 #endif // DISPLAY_H

@@ -111,20 +111,18 @@ void Display::displayRecommendationsRand() {
     }
 }
 
-void Display::displayRecommendationsCust() {
+void Display::displayRecommendationsCust(RecommendationEngine userRec) {
+    int num = 1;
 
-}
+    std::vector<TVShow> userCustShows = engine.compareData(userRec);
 
-void Display::displayRecommendationsRand() {
-    vector<TVShow> randomShows = engine.createRandReccomendation(allShows);
-    
-    cout << "===== Random Recommendations =====" << endl;
-    if (!randomShows.empty()) {
-        cout << "Here are your random picks:" << endl;
-        for (size_t i = 0; i < randomShows.size(); ++i) {
-            cout << "- " << randomShows[i].getTitle() << endl;
+    std::cout << "===== Your Custom Recommendation =====" << std::endl;
+    if (!userCustShows.empty()) {
+        for(int i = 0; i < userCustShows.size(); ++i) {
+            std::cout << num << ". " << userCustShows.at(i) << std::endl;
+            ++num;
         }
     } else {
-        cout << "No shows available." << endl;
+        std::cout << "No recommendations available." << std::endl;
     }
 }
