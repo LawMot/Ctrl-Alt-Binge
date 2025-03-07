@@ -3,8 +3,8 @@
 #include <limits>
 #include <vector>
 
-Display::Display(const RecommendationEngine& engine, const std::vector<TVShow>& allShows)
-    : engine(engine), allShows(allShows) {}
+Display::Display(const std::vector<TVShow>& allShows)
+    : allShows(allShows) {}
 
 void Display::Menu() {
 
@@ -32,10 +32,10 @@ void Display::Menu() {
         // if user chooses enter preferences
         if (input == 1) {
             RecommendationEngine custEngine = SetPreferences();
-            displayRecommendationsCust();
+            displayRecommendationsCust(custEngine);
 
         } else if (input == 2) {
-            displayRecommendationsRand();
+           //displayRecommendationsRand();
             ChooseMenuOrExit();
 
         } else if (input == 3) {
@@ -87,18 +87,18 @@ RecommendationEngine Display::SetPreferences() {
                 cout << "A number... PLEASE I BEG a number. Try again... \n" << endl;
                 continue;
             }
-            return RecommendationEngine ageRecommend(userAge);
+            return RecommendationEngine(userAge);;
         } else if (choice == 2) {
             string userGenre;
             cout << "Enter Your Favorite Genre: " << endl;
             cin >> userGenre;
-            return RecommendationEngine genreRecommend(userGenre, -1);
+            return RecommendationEngine(userGenre, -1);
             
         } else if (choice == 3) {
             string userDirector;
             cout << "Enter Your Favorite Director: " << endl;
             cin >> userDirector;
-            return RecommendationEngine directorRecommend(userDirector);
+            return RecommendationEngine(userDirector);
 
         } else if (choice == 4) {
             cout << "Returning to Menu... \n" << endl;
@@ -139,22 +139,24 @@ void Display::displayRecommendationsDev() {
     std::cout << "Nam's Recommendations: House of Cards, Euphoria, Sex and the City\n";
 }
 
-void Display::displayRecommendationsRand() {
-    // Get 1 random recommendation from the engine
-    std::vector<TVShow> randomShows = engine.createRandReccomendation(allShows);
+// void Display::displayRecommendationsRand() {
+//     // Get 1 random recommendation from the engine
+//     std::vector<TVShow> randomShows = engine.createRandReccomendation(allShows);
 
-    std::cout << "===== Random Recommendation =====" << std::endl;
-    if (!randomShows.empty()) {
-        std::cout << "We recommend: " << randomShows[0].getTitle() << std::endl;
-    } else {
-        std::cout << "No recommendations available." << std::endl;
-    }
-}
+//     std::cout << "===== Random Recommendation =====" << std::endl;
+//     if (!randomShows.empty()) {
+//         std::cout << "We recommend: " << randomShows[0].getTitle() << std::endl;
+//     } else {
+//         std::cout << "No recommendations available." << std::endl;
+//     }
+// }
 
 void Display::displayRecommendationsCust(RecommendationEngine userRec) {
     int num = 1;
 
-    std::vector<TVShow> userCustShows = engine.compareData(userRec);
+    std::vector<TVShow> userVector;
+
+    std::vector<TVShow> userCustShows = userRec.compareData(userVector);
 
     std::cout << "===== Your Custom Recommendation =====" << std::endl;
     if (!userCustShows.empty()) {

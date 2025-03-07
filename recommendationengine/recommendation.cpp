@@ -45,9 +45,9 @@ string RecommendationEngine::getDirector() const {
     return director;
 }
 
-// vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
+ vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
 
-// }
+}
 
 vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>& allShows) const {
     vector<TVShow> randomShows; // Store the random rec

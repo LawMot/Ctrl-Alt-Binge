@@ -14,4 +14,6 @@ public:
     std::string getGenre() const { return genre; }
     std::string getDirector() const { return director; }
     std::string getRating() const { return rating; }
+
+    friend std::ostream& operator<<(std::ostream& os, const TVShow& show);
 };

@@ -14,17 +14,16 @@ public:
 
     void displayRecommendationsDev();
 
-    void displayRecommendationsRand();
+ //   void displayRecommendationsRand();
 
-    void displayRecommendationsCust();
+    void displayRecommendationsCust(RecommendationEngine userRec);
 
     void ChooseMenuOrExit();
 
     RecommendationEngine SetPreferences();
 
-    Display(const RecommendationEngine& engine, const std::vector<TVShow>& allShows);
+    Display(const std::vector<TVShow>& allShows);
 private:
-    const RecommendationEngine& engine;
     const std::vector<TVShow>& allShows;
 };
 
