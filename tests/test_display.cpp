@@ -50,44 +50,6 @@ TEST(displayTests, testInvalidInputInt)
     EXPECT_TRUE(output.str().find("Bye! Hope you come around soon!") != string::npos);
 }
 
-// TEST(displayTests, testValidInput1) {
-//     // Simulate valid input "1" (Enter Preferences)
-//     istringstream input("1\n5\n"); // Simulate input for option 1
-//     cin.rdbuf(input.rdbuf()); // Redirect cin
-
-//     ostringstream output;
-//     cout.rdbuf(output.rdbuf()); // Redirect cout
-
-//     Display display({}); 
-//     display.Menu(); 
-
-//     // Expect to see the prompt for entering preferences
-//     EXPECT_TRUE(output.str().find("Choose your Recommendation Based off of:") != string::npos);
-
-//     // Expect that after entering preferences, the menu should appear
-//     EXPECT_TRUE(output.str().find("Exiting...") != string::npos);
-// }
-
-// TEST(displayTests, testValidInput2) {
-//     // Simulate valid input "2" (Random Recommendation)
-//     istringstream input("2\n2\n"); // Simulate input for option 2
-//     cin.rdbuf(input.rdbuf()); // Redirect cin
-
-//     ostringstream output;
-//     cout.rdbuf(output.rdbuf()); // Redirect cout
-
-//     Display display({}); 
-//     display.Menu(); 
-
-//     // Expect to see the prompt for choosing menu or exit
-//     EXPECT_TRUE(output.str().find("Would you like to go back to menu or exit?") != string::npos);
-
-//     EXPECT_TRUE(output.str().find("Bye! Hope you come around soon!") != string::npos);
-// }
-
-// TEST(displayTests, testValidInput3) {
-// }
-
 //Display dev recs 
 TEST(displayTests, devRecs) 
 {
