@@ -81,7 +81,22 @@ TEST(displayTests, devRecs)
 //Display rand recs 
 TEST(displayTests, randRecs) 
 {
-    
+    // Simulate invalid input first
+    istringstream input("2\n1\n4\n4\n"); // Invalid input followed by "4"
+    cin.rdbuf(input.rdbuf()); // Redirect cin
+
+    ostringstream output;
+    cout.rdbuf(output.rdbuf()); // Redirect cout
+
+    Display display({}); 
+    display.Menu(); 
+
+    EXPECT_TRUE(output.str().find("===== Random Recommendations =====") != string::npos);
+
+    EXPECT_TRUE(output.str().find("Please select an option (1-4): ") != string::npos);
+
+    // Expect that the "4" option will trigger the exit message
+    EXPECT_TRUE(output.str().find("Bye! Hope you come around soon!") != string::npos);
 }
 
 //Display custom recs 

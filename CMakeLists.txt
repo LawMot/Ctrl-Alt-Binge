@@ -11,6 +11,7 @@ ADD_EXECUTABLE(gatherdatatest
 ADD_EXECUTABLE(displaytest
     tests/test_display.cpp
     src/display.cpp
+    src/gatherdata.cpp
     recommendationengine/recommendation.cpp
     src/TvShow.cpp
 )

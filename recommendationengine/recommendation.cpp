@@ -1,7 +1,11 @@
 #include "recommendation.h"
-
+#include "../header/gatherdata.h"
 #include <iostream>
 #include <string>
+#include <ctime> 
+#include <cstdlib> 
+#include <set> 
+#include <vector> 
 
 using namespace std;
 
@@ -45,12 +49,13 @@ string RecommendationEngine::getDirector() const {
     return director;
 }
 
- vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
+vector<TVShow> RecommendationEngine::compareData(const vector<TVShow>) const {
 
 }
 
 vector<TVShow> RecommendationEngine::createRandReccomendation(const vector<TVShow>& allShows) const {
     vector<TVShow> randomShows; // Store the random rec
+
     if (allShows.empty()) return randomShows;
 
     srand(time(0));  

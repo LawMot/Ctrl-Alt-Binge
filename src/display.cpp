@@ -35,7 +35,7 @@ void Display::Menu() {
             displayRecommendationsCust(custEngine);
 
         } else if (input == 2) {
-           //displayRecommendationsRand();
+           displayRecommendationsRand();
             ChooseMenuOrExit();
 
         } else if (input == 3) {
@@ -139,17 +139,26 @@ void Display::displayRecommendationsDev() {
     std::cout << "Nam's Recommendations: House of Cards, Euphoria, Sex and the City\n";
 }
 
-// void Display::displayRecommendationsRand() {
-//     // Get 1 random recommendation from the engine
-//     std::vector<TVShow> randomShows = engine.createRandReccomendation(allShows);
+void Display::displayRecommendationsRand() {
+    GatherData loader; 
+    loader.setFilePath("TV Show Dataset.csv"); 
+    loader.loadData(); 
 
-//     std::cout << "===== Random Recommendation =====" << std::endl;
-//     if (!randomShows.empty()) {
-//         std::cout << "We recommend: " << randomShows[0].getTitle() << std::endl;
-//     } else {
-//         std::cout << "No recommendations available." << std::endl;
-//     }
-// }
+    vector <TVShow> allShows = loader.getInfo(); 
+
+    RecommendationEngine engine; 
+    vector <TVShow> recs = engine.createRandReccomendation(allShows); 
+
+    cout << "===== Random Recommendations =====" << endl;
+    if (!recs.empty()) {
+        cout << "Here are your random picks:" << endl;
+        for (size_t i = 0; i < recs.size(); ++i) {
+            cout << "- " << recs[i].getTitle() << endl;
+        }
+    } else {
+        cout << "No shows available." << endl;
+    }
+}
 
 void Display::displayRecommendationsCust(RecommendationEngine userRec) {
     int num = 1;

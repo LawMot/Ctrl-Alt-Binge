@@ -14,7 +14,7 @@ public:
 
     void displayRecommendationsDev();
 
- //   void displayRecommendationsRand();
+    void displayRecommendationsRand();
 
     void displayRecommendationsCust(RecommendationEngine userRec);
 
