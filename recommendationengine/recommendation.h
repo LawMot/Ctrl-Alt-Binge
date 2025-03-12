@@ -27,7 +27,10 @@ class RecommendationEngine {
     int getAge() const;
     string getGenre() const;
     string getDirector() const;
-    vector<TVShow> compareData(const vector<TVShow>) const;
+    vector<TVShow> compareDirectors(vector<TVShow>& inputVector, RecommendationEngine userDirector);
+    const int levenshteinDistance(string userDirector, string compareDirector); 
+    vector<TVShow> compareAge(const vector<TVShow>&) const;
+    vector<TVShow> compareGenre(const vector<TVShow>& allShows) const;
     vector<TVShow> createRandReccomendation(const vector<TVShow>& allShows) const;
 };
 

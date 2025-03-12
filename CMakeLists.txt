@@ -24,8 +24,19 @@ ADD_EXECUTABLE(manualdistest;
     src/TvShow.cpp
 )
 
+ADD_EXECUTABLE(agetest
+    tests/enginetest.cpp
+    src/gatherdata.cpp
+    recommendationengine/recommendation.cpp
+    src/TvShow.cpp
+)
+
 target_link_libraries(gatherdatatest gtest gtest_main)
 
 target_link_libraries(displaytest gtest gtest_main)
 
 target_link_libraries(manualdistest gtest gtest_main)
+
+target_link_libraries(agetest gtest gtest_main)
+
+target_link_libraries(displaytest gtest gmock)
