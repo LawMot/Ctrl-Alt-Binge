@@ -99,8 +99,20 @@ TEST(displayTests, randRecs)
     EXPECT_TRUE(output.str().find("Bye! Hope you come around soon!") != string::npos);
 }
 
-//Display custom recs 
-TEST(displayTests, custRecs) 
-{
-    
+
+TEST(RecommendationEngineTest, levenshteinTest) {
+    RecommendationEngine engine; 
+    EXPECT_EQ(engine.levenshteinDistance("director", "director"), 0);
+
+    EXPECT_EQ(engine.levenshteinDistance("director", ""), 8);  // "director" length is 8
+    EXPECT_EQ(engine.levenshteinDistance("", "director"), 8);
+
+    EXPECT_EQ(engine.levenshteinDistance("director", "directir"), 1);  // One character change
+    EXPECT_EQ(engine.levenshteinDistance("directir", "director"), 1);
+
+    EXPECT_EQ(engine.levenshteinDistance("director", "producor"), 6); 
+    EXPECT_EQ(engine.levenshteinDistance("director oh", "producor oj"), 7); 
+
+    EXPECT_EQ(engine.levenshteinDistance("", ""), 0);
 }
+
