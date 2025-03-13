@@ -18,7 +18,7 @@ ADD_EXECUTABLE(runAllTests
     src/TvShow.cpp
 )
 
-ADD_EXECUTABLE(manualdistest;
+ADD_EXECUTABLE(manualdistest
     tests/main.cpp
     src/display.cpp
     src/gatherdata.cpp
