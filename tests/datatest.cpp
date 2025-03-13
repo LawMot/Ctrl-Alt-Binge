@@ -14,7 +14,7 @@ TEST(getDataTests, badDataTest)
     ASSERT_THROW(data.loadData(), runtime_error);
 }
 
-
+   
 TEST(getDataTests, goodDataTest) 
 {
     GatherData data;

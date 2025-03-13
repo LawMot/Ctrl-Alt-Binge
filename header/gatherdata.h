@@ -8,7 +8,7 @@
 using namespace std; 
 
 class GatherData {
-    private:
+    private:   
         vector<TVShow> allData; 
         string filePath; 
     public:

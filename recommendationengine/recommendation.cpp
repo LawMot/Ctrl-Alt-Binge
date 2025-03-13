@@ -150,7 +150,7 @@ vector<TVShow> RecommendationEngine::compareGenre(const vector<TVShow>& allShows
     for(int i = 0; i < allShows.size(); ++i) {
         if(allShows[i].getGenre() == genre) {  // Direct genre match
             genreMatches.push_back(allShows[i]);
-        }
+        }    
     }
     return genreMatches;
 }

@@ -19,7 +19,7 @@ TEST(FilterDirectorsTest, levenshteinTest) {
     EXPECT_EQ(engine.levenshteinDistance("director oh", "producor oj"), 7); 
 
     EXPECT_EQ(engine.levenshteinDistance("", ""), 0);
-}
+}   
 
 TEST(FilterDirectorsTest, testDirectorRec) {
     vector<TVShow> recommendedShows;

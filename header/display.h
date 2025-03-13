@@ -9,7 +9,7 @@
 #include <vector>
 
 class Display {
-public:
+public:    
     void Menu();
 
     void displayRecommendationsDev();

@@ -25,7 +25,7 @@ ADD_EXECUTABLE(manualdistest
     recommendationengine/recommendation.cpp
     src/TvShow.cpp
 )
-
+   
 target_link_libraries(gatherdatatest gtest gtest_main)
 
 target_link_libraries(runAllTests gtest gtest_main)

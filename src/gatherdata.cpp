@@ -12,7 +12,7 @@ void GatherData::loadData()
 {
     ifstream file(filePath); 
     
-    if (!file.is_open())
+    if (!file.is_open())   
     {
         throw runtime_error("Error: Could not open file"); 
     }
