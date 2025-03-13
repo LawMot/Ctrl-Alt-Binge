@@ -73,10 +73,23 @@ What are the features that the project provides?
 >  * Each team member should also submit the Peer Evaluation Form on Canvas for this final phase. In this form, you need to fill in the names of all team members, the percentage of work contributed by each member for the final phase, and a description of their contributions. Remember that each team member should submit the form individually.
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+![pic1](https://github.com/user-attachments/assets/d825c2aa-5e3b-48d9-a925-21f51a64a2a4)
+![pic2](https://github.com/user-attachments/assets/555ea596-6263-4727-aa4f-0875fa589e70)
+![pic3](https://github.com/user-attachments/assets/679b6d78-49c0-4434-a308-96291f0331a7)
+![pic4](https://github.com/user-attachments/assets/e1a35589-06cc-4c85-9c3b-0ab5a366cfed)
+![pic5](https://github.com/user-attachments/assets/6d40ccd6-1a68-4291-8da9-4a366887afac)
+
  ## Installation/Usage
  * Installation: Git clone the repository
  * Usage: Cmake ., make, ./manualdistest
+
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+We tested it with Google Test. 
+ ![tests](https://github.com/user-attachments/assets/508508e3-376f-48d9-b379-fb4ee6d3aa45)
+
+These are some examples of tests that we did. 
+![test3](https://github.com/user-attachments/assets/c0ec9113-5cde-4462-be00-9d2810519cc9)
+![test5](https://github.com/user-attachments/assets/36b8b25c-a3fb-48eb-9832-a6f81cfe38b2)
+![test6](https://github.com/user-attachments/assets/2d400bdd-3497-494c-ac82-daebca0d16cd)
+
+
