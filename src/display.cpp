@@ -267,7 +267,7 @@ void Display::displayGenreRec(string userGenre) {
              cout << "Director: " << show.getDirector() << endl;
              cout << "Rating: " << show.getRating() << endl;
              cout << "Genre: " << show.getGenre() << endl << endl;
-             count++;
+             count++;   
          }
      } else {
          std::cout << "No recommendations available." << std::endl;
